@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+  >
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../static/css/style.css">
+  <title>Riciclo e quotidianità</title>
+</head>
+<body>
+  <header class="header">
+    <div class="header__text">
+      <h1>Come riciclare ogni giorno</h1>
+      <p>Piccolo prontuario per applicare il riciclaggio tutti i giorni!</p>
+    </div>
+  </header>
+  <main>
+    {% block content %}
+    <h2 class="main__title">Come fare?</h2>
+    <ul class="list" id="list">
+      <li class="list__item">
+        <a href="riciclo_e_quotidianita.html">
+          <img class="item__img" src="../static/img/riciclaggio.jpg" alt="light">
+          <span>1- Spegni qualunque apparecchio elettrico quando non serve. <br> 2- Regola la temperatura interna della casa. <br> 3-Usa le lampadine a LED <br> 4- Misura l'energia consumata dai tuoi dispositivi. <br> 5- Fai il bucato in lavatrice solo a pieno carico. <br> 
+          </span>
+        </a>
+      </li>
+      <h3 class="main__title">Pochi ma utili miglioramenti <br> a cui porta il riciclo</h3>
+      <ol class="list__recycle"> Diminuzione dell'inquinamento dei mari <br> Aumento della qualità di vita e diminuzione delle discariche <br> consapevolezza di quanto la natura valga </ol>
+      
+    
+      <li class="list__item">
+        <a href="riciclo_e_quotidianita.html">
+          <img class="item__img" src="../static/img/bimbi_riciclo.png" alt="light">
+          <a href="https://www.greenme.it/casa-e-giardino/diy-upcycling/riciclo-creativo/">IDEE PER UN RICICLO CREATIVO.</a>
+          <h6>Nel qui presente link troviamo delle ottime idee <br>per coniugare quotidianità <br> e <br> ambiente in modo facile e sostenibile </h6>
+          <p>I dati parlano chiaro e pochi ma utili accorgimenti possono fare la differenza al pianeta che abitiamo!</p></a>
+      </li>
+    </ul>
+    {% endblock %}
+  </main>
+  <footer>
+
+  </footer>
+</body>
+</html>
