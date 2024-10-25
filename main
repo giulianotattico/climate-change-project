@@ -1,0 +1,58 @@
+# Import
+from flask import Flask, render_template, request
+
+
+app = Flask(__name__)
+
+
+
+# La prima pagina
+@app.route('/')
+def index():
+    return render_template('index.html')
+# La seconda pagina
+@app.route('/temi')
+def temi():
+    return render_template(
+                            'temi_ambientali.html', 
+                            
+                           )
+
+# La terza pagina
+@app.route('/riciclo')
+def riciclo():
+    return render_template(
+                            'riciclo_e_quotidianita.html',                           
+                                                      
+                           )
+
+
+@app.route('/fonti')
+def fonti():
+    return render_template('altre_fonti.html', 
+                        
+                                                    )
+                        
+
+
+#I risultati del modulo
+@app.route('/submit', methods=['POST'])
+def submit_form():
+    # Dichiarare le variabili per la raccolta dei dati
+    name = request.form['name']
+    email = request.form['email']
+    address = request.form['address']
+    date = request.form['date']
+    with open("form.txt", "a") as f:
+        f.write(f"Utente:{name}\n{email}\n{address}")
+    # È possibile salvare i dati o inviarli via e-mail
+    return render_template('form_result.html', 
+                           # Inserire le variabili qui
+                           name=name,
+                           email=email,
+                           address=address,
+                           date=date,
+                           result = 100
+                           )
+
+app.run(debug=True)
